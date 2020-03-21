@@ -1,3 +1,5 @@
+![](https://travis-ci.com/twei55/covid19.svg?branch=master)
+
 ## Covid-19 JSON API
 
 Visualize Covid-19 data in [Grafana](https://grafana.com/grafana/) using a the [JSON Datasource plugin](https://grafana.com/grafana/plugins/simpod-json-datasource).

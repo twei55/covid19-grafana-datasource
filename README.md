@@ -1,4 +1,4 @@
-![](https://travis-ci.com/twei55/covid19.svg?branch=master)
+![](https://travis-ci.com/twei55/covid19-grafana-datasource.svg?branch=master)
 
 ## Covid-19 JSON API
 

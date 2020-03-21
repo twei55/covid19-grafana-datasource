@@ -1,0 +1,4 @@
+language: python
+install:
+  - pipenv install --dev
+  - PYTHONPATH=src ENVIRONMENT=test pipenv run mamba src/tests

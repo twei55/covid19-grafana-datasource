@@ -1,0 +1,3 @@
+[MASTER]
+disable=no-else-return, missing-docstring, invalid-name, import-error
+max-line-length = 120

@@ -8,12 +8,14 @@ import requests
 
 class Covid19:
 
+    DATA_URL = "https://pomber.github.io/covid19/timeseries.json"
+
     def __init__(self):
         if "ENVIRONMENT" in os.environ and os.environ["ENVIRONMENT"] == 'test':
             with open('src/example-data/timeseries.json', 'rb') as file:
                 self.data = json.load(file)
         else:
-            response = requests.get("https://pomber.github.io/covid19/timeseries.json")
+            response = requests.get(self.DATA_URL)
             self.data = response.json()
 
     def countries(self):

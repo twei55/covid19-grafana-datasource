@@ -1,4 +1,11 @@
 language: python
 install:
   - pipenv install --dev
-  - PYTHONPATH=src ENVIRONMENT=test pipenv run mamba src/tests
+
+jobs:
+  include:
+    - stage: test
+      env:
+        - PYTHONPATH=script
+        - ENVIRONMENT=test
+      script: pipenv run mamba src/tests

@@ -58,7 +58,7 @@ class Covid19:
     def filter_datapoint(datapoint, group, from_date_dt, to_date_dt):
         datapoint_dt = mktime(datetime.strptime(datapoint["date"], "%Y-%m-%d").timetuple())
         if from_date_dt <= datapoint_dt <= to_date_dt:
-            return [float(datapoint[group]), datapoint_dt]
+            return [float(datapoint[group]), int(datapoint_dt * 1000)]
         else:
             return None
 

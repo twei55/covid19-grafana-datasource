@@ -2,7 +2,7 @@
 
 ## Covid-19 JSON API
 
-Visualize Covid-19 data in [Grafana](https://grafana.com/grafana/) using a the [JSON Datasource plugin](https://grafana.com/grafana/plugins/simpod-json-datasource).
+Visualize Covid-19 data in [Grafana](https://grafana.com/grafana/) using the [JSON Datasource plugin](https://grafana.com/grafana/plugins/simpod-json-datasource).
 
 ### API Endpoint
 
@@ -10,7 +10,7 @@ This API is running at [https://covid19-grafana.herokuapp.com/](https://covid19-
 
 ### Data
 
-The API endpoint uses data provided by [https://github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19) and transformed to JSON by [https://pomber.github.io/covid19/timeseries.json](https://github.com/CSSEGISandData/COVID-19).
+The API endpoint uses data provided by [https://github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19) and transformed to JSON by [https://pomber.github.io/covid19](https://pomber.github.io/covid19).
 
 ### Develop and run locally
 

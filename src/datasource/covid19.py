@@ -9,7 +9,7 @@ import requests
 class Covid19:
 
     def __init__(self):
-        if os.environ["ENVIRONMENT"] == 'test':
+        if "ENVIRONMENT" in os.environ and os.environ["ENVIRONMENT"] == 'test':
             with open('src/example-data/timeseries.json', 'rb') as file:
                 self.data = json.load(file)
         else:

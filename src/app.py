@@ -9,7 +9,7 @@ def index():
     return Response(status=200)
 
 # Used by the find metric options on the query tab in panels
-@app.route('/search', methods=['GET'])
+@app.route('/search', methods=['GET', 'POST'])
 def search():
     covid19 = Covid19()
     return jsonify(covid19.metrics())

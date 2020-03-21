@@ -6,6 +6,6 @@ jobs:
   include:
     - stage: test
       env:
-        - PYTHONPATH=script
+        - PYTHONPATH=src
         - ENVIRONMENT=test
       script: pipenv run mamba src/tests

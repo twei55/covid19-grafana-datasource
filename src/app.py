@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, Response
+from flask import Flask, jsonify, render_template, request
 from datasource.covid19 import Covid19
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Returns 200 ok. Used for "Test connection" on the datasource config page.
 @app.route('/', methods=['GET'])
 def index():
-    return Response(status=200)
+    return render_template('index.html')
 
 # Used by the find metric options on the query tab in panels
 @app.route('/search', methods=['GET', 'POST'])

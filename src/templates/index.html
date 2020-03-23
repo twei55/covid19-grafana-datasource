@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="https://aws1.discourse-cdn.com/standard14/uploads/grafana/optimized/2X/2/27fb03d0906653283f7bc272584543da514529de_2_32x32.png">
+
+    <title>Covid-19 JSON API for Grafana</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+      /* Sticky footer styles
+      -------------------------------------------------- */
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      body {
+        margin-bottom: 60px; /* Margin bottom by footer height */
+      }
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Set the fixed height of the footer here */
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
+      }
+
+      .footer span {
+        margin-left: 10px;
+      }
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      .container {
+        width: auto;
+        max-width: 680px;
+        padding: 0 15px;
+      }
+
+      h1 {
+        margin-bottom: 1em;
+      }
+
+      h3 {
+        margin-bottom: 0.5em;
+      }
+
+      ul li {
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-5">JSON-API for Corona Virus / Covid-19 statistics</h1>
+      <p>This API allows you to display statistical data of COVID-19 Cases provided the John Hopkins University in <a href="https://grafana.com/grafana/">Grafana</a>.</p>
+      <p>
+        <h3>Usage</h3>
+        <ul>
+          <li>Install the <a href="https://grafana.com/grafana/plugins/simpod-json-datasource">JSON Datasource for Grafana</a></li>
+          <li>
+            Add datasource in Grafana and pass the following API endpoint url to the URL field as described in the setup instructions:
+            <a href="https://covid19-grafana.herokuapp.com/">https://covid19-grafana.herokuapp.com/</a>
+          </li>
+          <li>
+            Add a panel to your dashboard, select the JSON Datasource and choose a metric from the list.
+          </li>
+          <li>
+            The timeseries is starting from January, 22 2020 on and contains confirmed cases, deaths and recovered cases for every country and every day. Data is updated three times a day.
+          </li>
+        </ul>
+      </p>
+      <p>
+        <h3>Credits</h3>
+        <ul>
+          <li>Data provided by <a href="https://systems.jhu.edu/research/public-health/ncov/">JHU CSSE</a></li>
+          <li>COVID-19 data transformed to JSON by <a href="https://github.com/pomber/covid19">Pomber</a></li>
+        </ul>
+      </p>
+      <p>
+        Stay healthy.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>
+          <a href="https://github.com/twei55/covid19-grafana-datasource" target="_blank"><img height="22" width="22" src="https://unpkg.com/simple-icons@latest/icons/github.svg" /></a>
+        </span>
+        <span>
+          <a href="https://twitter.com/twei55" target="_blank"><img height="22" width="22" src="https://unpkg.com/simple-icons@latest/icons/twitter.svg" /></a>
+        </span>
+        <span class="text-muted">
+            Tobias Weiss
+        </span>
+      </div>
+    </footer>
+  
+
+</body></html>

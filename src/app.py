@@ -23,7 +23,7 @@ def query():
     to_date = request.json["range"]["to"]
     for target in request.json["targets"]:
         series.append({
-            "targets": [target],
+            "target": target["target"],
             "datapoints": covid19.timeseries(target["target"], from_date, to_date)
         })
     return jsonify(series)

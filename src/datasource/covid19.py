@@ -62,7 +62,7 @@ class Covid19:
         if from_date_dt <= datapoint_dt <= to_date_dt:
             try:
                 return [float(datapoint[group]), int(datapoint_dt * 1000)]
-            except KeyError:
+            except (KeyError, TypeError):
                 return [0, int(datapoint_dt * 1000)]
         else:
             return None

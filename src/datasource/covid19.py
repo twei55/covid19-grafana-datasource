@@ -12,7 +12,7 @@ class Covid19:
 
     def __init__(self):
         if "ENVIRONMENT" in os.environ and os.environ["ENVIRONMENT"] == 'test':
-            with open('src/example-data/timeseries.json', 'rb') as file:
+            with open('src/example-data/timeseries.min.json', 'rb') as file:
                 self.data = json.load(file)
         else:
             response = requests.get(self.DATA_URL)
@@ -60,7 +60,10 @@ class Covid19:
     def filter_datapoint(datapoint, group, from_date_dt, to_date_dt):
         datapoint_dt = mktime(datetime.strptime(datapoint["date"], "%Y-%m-%d").timetuple())
         if from_date_dt <= datapoint_dt <= to_date_dt:
-            return [float(datapoint[group]), int(datapoint_dt * 1000)]
+            try:
+                return [float(datapoint[group]), int(datapoint_dt * 1000)]
+            except KeyError:
+                return [0, int(datapoint_dt * 1000)]
         else:
             return None
 

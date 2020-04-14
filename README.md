@@ -10,7 +10,7 @@ This API is running at [https://covid19-grafana.herokuapp.com/](https://covid19-
 
 ### Data
 
-The API endpoint uses data provided by [https://github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19) and transformed to JSON by [https://pomber.github.io/covid19](https://pomber.github.io/covid19).
+The API endpoint uses data provided by [https://github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19) and transformed to JSON by [https://github.com/pomber/covid19](https://github.com/pomber/covid19).
 
 ### Develop and run locally
 
